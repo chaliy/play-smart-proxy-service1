@@ -16,3 +16,6 @@ deploy-init:
 
 deploy:
 	git push azure master
+
+console:
+	start https://$(SERVICE_NAME).scm.azurewebsites.net/ 
