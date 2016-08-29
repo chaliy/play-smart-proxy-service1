@@ -1,6 +1,6 @@
 .PHONY: all, deploy
 
-SERVICE_NAME=play-smart-proxy
+SERVICE_NAME=play-smart-proxy-service1
 
 edit:
 	swagger project edit
