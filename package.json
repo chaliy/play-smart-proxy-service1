@@ -24,6 +24,6 @@
     "test": "swagger project test"
   },
   "engines": {
-    "node": "6.5.0",
+    "node": "6.5.0"
   }
 }
