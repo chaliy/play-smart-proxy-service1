@@ -10,6 +10,3 @@ template:
 
 apply: template
 	azure group deployment create -q -f azuredeploy.json -e azuredeploy.parameters.json $(RESOURCE_GROUP) default
-
-deploy:
-	https://play-smart-proxy-service1.scm.azurewebsites.net
