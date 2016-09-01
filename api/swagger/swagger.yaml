@@ -43,6 +43,54 @@ paths:
           description: Error
           schema:
             $ref: '#/definitions/Error'
+  /employee/{id}:
+    x-swagger-router-controller: employee
+    get:
+      description: Employee details
+      operationId: item
+      tags:
+        - employee
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the employee to retrieve
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/Employee"
+        "404":
+          description: Not found
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/Error"
+  /employee/search:
+    x-swagger-router-controller: employee
+    get:
+      description: Search for employee
+      operationId: search
+      tags:
+        - employee
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: The query to find
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Employee"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/Error"
   /swagger:
     x-swagger-pipe: swagger_raw
 definitions:
